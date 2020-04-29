@@ -1,14 +1,25 @@
 //Much like Word Guess Game, instead player will guess numbers.
 
 //Display 4 images of crystals(red, purple, orange, yellow (image file).
-var yourScore = getElementById(red, purple, yellow, orange.onclick(math.sum));
-console.log("line 4", yourScore);
-yourScore.innerHTML = 0;
-console.log("line 7", yourScore);
-var targetScore = document.getElementById("targetScore");
-console.log("line 9", targetScore);
-targetScore = getRandomValue(1-12);
-console.log("line 11", targetScore);
+var yourScore = getElementById(red, purple, yellow, orange.onclick(math.sum)); yourScore.innerHTML = 0;
+console.log("yourScore", yourScore);
+var targetScore = document.getElementById("targetScore"); targetScore = getRandomValue(1-12);
+console.log("targetScore", targetScore);
+//adding the crystals images over the buttons.
+$('button').bind('click', functon () {
+    $(this).replaceWith('<img src="/red.jpg"/>');
+    console.log(red);
+});
+$('the-button').bind('click', functon () {
+    $(yellow).replaceWith('<img src="/yellow.jpg"/>');
+});
+$('the-button').bind('click', functon () {
+    $(purple).replaceWith('<img src="/purple.jpg"/>');
+});
+$('the-button').bind('click', functon () {
+    $(orange).replaceWith('<img src="/orange.jpg"/>');
+});
+
 //Each crystal to have random # "hidden" values. ARRAY: 1-12.
 //Player shown RANDOM # at start of game. ARRAY: 19-120. FO LOOP?
 //Use ON(CLICK) for each Crystal, # RANDOMLY chosen (ARRAY). FOR LOOP?

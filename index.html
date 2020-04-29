@@ -1,23 +1,73 @@
-"<!DOCTYPE html>
+"
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <title>Crystal Collector Game</title>
 </head>
+
 <body>
-    <h1>Crystal Collector Game</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Crystal Collector Game</h1>
+                <h2>How to Play the Game.</h2>
+            </div>
+        </div>
+        <div id="instruct">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>You will be given a random number at the start of the game. There are four crystals below. By
+                        clicking on a
+                        crystal you will add a specific amount of points to your total score. You win the game by
+                        matching your total
+                        score
+                        to the ramdom number, you lose the game if your total score goes above the random number.</p>
+                    <p>The value of each crystal is hidden from you until you click on it. Each time when the game
+                        starts, the game will
+                        change the values of each crystal.</p>
+                    <br>
+                </div>
+            </div>
+        </div>
 
-    <h2>Guess The Numbers to Win!</h2>
-    <p>How to play the game.</p>
-
-    <button onclick="changeColor('red');">red</button>
-    <button onclick="changeColor('yellow');">yellow</button>
-    <button onclick="changeColor('purple');">purple</button>
-    <button onclick="changeColor('orange');">orange</button>
 
 
+        <div class="row">
+            <h3 class="col-sm-2">
+                <h3 class="col-sm-3">Target Score: <span id='targetScore'>0</span>
+                </h3>
+            </h3>
+        </div>
+        <div class="row">
+            <h3 class="col-sm-2">
+                <h3 class="col-sm-3 ">Your Score: <span id='yourScore'>0</span>
+                </h3>
+            </h3>
+        </div>
+
+        <br>
+        <div id="jewels">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="buttons">
+                        <button class="diamond" id="red" value="5">Red</button>
+                        <button class="diamond" id="purple" value="10">Purple</button>
+                        <button class="diamond" id="yellow" value="15">Yellow</button>
+                        <button class="diamond" id="orange" value="20">Orange</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>"
