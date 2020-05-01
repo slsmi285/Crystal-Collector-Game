@@ -113,8 +113,8 @@ $(document).ready(() => {
     
 
     function resetTwo() {
-        randNumber = Math.floor(Math.random() * (120 - 19) + 19);
-            $('#randNum').html(randNumer);
+       randNumber = Math.floor(Math.random() * (120 - 19) + 19);
+           $('#randNum').html(randNumber);
             redJ = Math.floor(Math.random() * 12) + 1;
             purpleJ = Math.floor(Math.random() * 12) + 1;
             yellowJ = Math.floor(Math.random() * 12) + 1;
