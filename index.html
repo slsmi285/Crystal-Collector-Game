@@ -5,8 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--styles-->
+    <link rel="stylesheet" type="text.css" href="../Assets/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <title>Crystal Collector Game</title>
@@ -16,57 +19,75 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1>Crystal Collector Game</h1>
-                <h2>How to Play the Game.</h2>
+                <h1 style="text-align: center;">Crystal Collector Game</h1>
+                <h2 style="text-align: center;">How to Play the Game.</h2>
             </div>
         </div>
-        <div id="instruct">
+
+
+        <div id="instructions">
             <div class="row">
                 <div class="col-sm-12">
-                    <p>You will be given a random number at the start of the game. There are four crystals below. By
-                        clicking on a
-                        crystal you will add a specific amount of points to your total score. You win the game by
-                        matching your total
-                        score
-                        to the ramdom number, you lose the game if your total score goes above the random number.</p>
-                    <p>The value of each crystal is hidden from you until you click on it. Each time when the game
-                        starts, the game will
-                        change the values of each crystal.</p>
+                    <p style="text-align: center;">You will be given a random number at the start of the game. There are
+                        four crystals below. <br> By
+                        clicking on a crystal you will add a specific amount of points to your total score.<br> You win
+                        the game by
+                        matching your total score to the ramdom number,<br> you lose the game if your total score goes
+                        above the random number. <br>
+                        The value of each crystal is hidden from you until you click on it.<br> Each time when the game
+                        starts, the game will change the values of each crystal.</p>
                     <br>
                 </div>
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="random-number" id="randNum"></div>
+                <div class="crystal-array" id="crysArray">
+
+                    <img src="assets/images/red.jpg" id="red" alt="red">
+
+                    <img src="assets/images/purple.jpg" id="purple" alt="purple">
+                    </button>
+
+                    <img src="assets/images/yellow.jpg" id="yellow" alt="yellow">
+                    </button>
+
+                    <img src="assets/images/orange.jpg" id="orange" alt="orange">
+                
+                </div>
+
+            </div>
+
+        </div>
 
 
         <div class="row">
-            <h3 class="col-sm-2">
-                <h3 class="col-sm-3">Target Score: <span id='targetScore'>0</span>
-                </h3>
-            </h3>
-        </div>
-        <div class="row">
-            <h3 class="col-sm-2">
-                <h3 class="col-sm-3 ">Your Score: <span id='yourScore'>0</span>
-                </h3>
-            </h3>
-        </div>
+            <div class="col-sm-12">
+                <div class="total-score">
+                    <h2>Your total<br> score is: </h2>
+    
+                    <div id="totScore">0</div>
+                </div>
+                
 
-        <br>
-        <div id="jewels">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="buttons">
-                        <button class="diamond" id="red" value="5">Red</button>
-                        <button class="diamond" id="purple" value="10">Purple</button>
-                        <button class="diamond" id="yellow" value="15">Yellow</button>
-                        <button class="diamond" id="orange" value="20">Orange</button>
-                    </div>
-
+                <div class="wins-loses">
+                    <h4>Wins:</h4>
+                    <div id="wins">0</div>
+                    <h4>Losses:</h4>
+                    <div id="losses">0</div>
                 </div>
             </div>
+        
         </div>
+
+
+
     </div>
+
+
     <script src="assets/javascript/game.js"></script>
 </body>
 
