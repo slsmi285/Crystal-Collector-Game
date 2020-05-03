@@ -1,4 +1,6 @@
-
+.container {
+    background-color: burlywood;
+}
 
 .instructions {
     width: 75%;
@@ -7,6 +9,10 @@
     padding-right: 10px;
     background-color: silver;
     border: 2px solid dodgerblue;
+}
+
+#p1 {
+    border: 1px solid pink;
 }
 
 .random-number {
@@ -96,10 +102,13 @@
 }
 
 .footer {
-    width: 26%;
+    width: 100%;
+    position: relative;
+    clear: both;
+
     padding-top: 4px;
     padding-bottom: 4px;
-    margin: 33% 0 0 36%;
+    margin-top: 30px;
     text-align: center;
     background-color: #00e5ff;
     border: 8px solid;
@@ -177,7 +186,6 @@
    .total-score {
        margin-left: 8%;
        width: 35%;
-
    }
 
    .wins-loses {
@@ -189,6 +197,4 @@
        margin-top: 104%;
        margin-left: 17%;
        width: 60%;
-   }
-
-
+}

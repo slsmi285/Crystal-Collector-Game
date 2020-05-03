@@ -2,7 +2,7 @@
 $(document).ready(() => {
     //Program generates RANDOM number between 19 and 120.
     var randNumber = Math.floor(Math.random() * (120 - 19) + 19);
-        $('#randNum').html(randNumber);
+    $('#randNum').html(randNumber);
     //each crystal has HIDDEN VALUE, RANDOM (1-12)
     var redJ = Math.floor(Math.random() * 12) + 1;
     var purpleJ = Math.floor(Math.random() * 12) + 1;
@@ -22,16 +22,16 @@ $(document).ready(() => {
     function win() {
         wins = wins + 1;
         $('#wins').text(wins);
-        resetTwo();
+        alert("You Won!!!");
         reset();
-        
+
 
     }
 
     function lose() {
         losses = losses + 1;
         $('#losses').text(losses);
-        resetTwo();
+        alert("You Lost ");
         reset();
     }
 
@@ -42,11 +42,9 @@ $(document).ready(() => {
         if (totScore === randNumber) {
             win();
             reset();
-            resetTwo();
         } else if (totScore > randNumber) {
             lose();
             reset();
-            resetTwo();
         }
 
     });
@@ -58,11 +56,9 @@ $(document).ready(() => {
         if (totScore === randNumber) {
             win();
             reset();
-            resetTwo();
         } else if (totScore > randNumber) {
             lose();
             reset();
-            resetTwo();
         }
 
     });
@@ -74,11 +70,9 @@ $(document).ready(() => {
         if (totScore === randNumber) {
             win();
             reset();
-            resetTwo();
         } else if (totScore > randNumber) {
             lose();
             reset();
-            resetTwo();
         }
 
     });
@@ -90,35 +84,37 @@ $(document).ready(() => {
         if (totScore === randNumber) {
             win();
             reset();
-            resetTwo();
         } else if (totScore > randNumber) {
             lose();
             reset();
-            resetTwo();
         }
 
     });
-    
+
     //Wins IF total score === (matches) the random number from the start of game.
     //Loses IF total score > the random number.
     //Game RESTARTS if win or loss, and new random number appears. Crystals to have new hidden values. FOR LOOP?
     //User's score will RESET to 0.
     //Overall score...Display WINS and LOSSES, FOR LOOP. 
     //Game automatically goes into another GAME -- Overal score is kept and tracked. But values are refreshed.
-    function reset() {
-        totScore = 0;
-        $('#totScore').text(totalScore);
-        console.log("game over")
-    }
-    
+    //function reset() {
+    //totScore = 0;
+    //$('#totScore').text(totScore);
+    //console.log("game over");
+    //}
 
-    function resetTwo() {
-       randNumber = Math.floor(Math.random() * (120 - 19) + 19);
-           $('#randNum').html(randNumber);
-            redJ = Math.floor(Math.random() * 12) + 1;
-            purpleJ = Math.floor(Math.random() * 12) + 1;
-            yellowJ = Math.floor(Math.random() * 12) + 1;
-            orangeJ = Math.floor(Math.random() * 12) + 1;
-    }
+
+    function reset() {
+
+        totScore = 0;
+        $('#totScore').text(totScore);
     
+        randNumber = Math.floor(Math.random() * (120 - 19) + 19);
+        $('#randNum').html(randNumber);
+        redJ = Math.floor(Math.random() * 12) + 1;
+        purpleJ = Math.floor(Math.random() * 12) + 1;
+        yellowJ = Math.floor(Math.random() * 12) + 1;
+        orangeJ = Math.floor(Math.random() * 12) + 1;
+    }
+
 });
